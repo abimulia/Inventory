@@ -2,3 +2,16 @@ spring:
   application:
     name: masjid-inventory
     version: 1.0.0
+okta:
+  oauth2:
+    issuer: ${OAUTH2_ISSUER}
+    client-id: ${OAUTH2_CLIENT_ID}
+    client-secret: ${OAUTH2_CLIENT_SECRET}
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${OAUTH2_ISSUER}
+
+
+
